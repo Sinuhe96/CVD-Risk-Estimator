@@ -97,6 +97,7 @@ def load_detector():
         zip_ref.extractall('./')
     print('Loading the heart detector...')
     os.chdir(proj_name)
+    print('Torch load with weights_only=False!')
     model = torch.load(model_name,weights_only=False)
     os.chdir('../')
     return model
